@@ -11,7 +11,6 @@ public class TcpServer extends TcpServerFactory {
     private ServerSocket ss;
     private ExecutorService executor;
 
-
     public TcpServer() throws IOException {
 	ss = new ServerSocket(PORT);
 	executor = Executors.newFixedThreadPool(POOL_SIZE);

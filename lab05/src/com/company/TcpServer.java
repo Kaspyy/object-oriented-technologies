@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpServer extends TcpFactory {
+public class TcpServer extends TcpServerFactory {
     public static final int PORT = 8205;
     private static final int POOL_SIZE = 10;
     private ServerSocket ss;
@@ -33,8 +33,4 @@ public class TcpServer extends TcpFactory {
 	return "TcpServer [port=" + ss.getLocalPort() + "]";
     }
 
-    @Override
-    public Runnable createTask() throws IOException {
-        return new TcpServer();
-    }
 }

@@ -3,7 +3,7 @@ package com.company;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpClient extends TcpFactory {
+public class TcpClient extends TcpClientFactory {
     private static final int POOL_SIZE = 10;
     private static final int RUNS = 100;
 
@@ -19,9 +19,4 @@ public class TcpClient extends TcpFactory {
 	new TcpClient().fire();
     }
 
-
-    @Override
-    public Runnable createTask() {
-        return new TcpClient();
-    }
 }

@@ -25,7 +25,8 @@ class CurrentDateTimeServiceTests {
         when(humanReadableDateTimeProvider.currentDateTime()).thenReturn("7 Feb 2022 12:23:34");
         when(isoDateTimeProvider.currentDateTime()).thenReturn("2022-02-07T12:23:34");
 
-        assertEquals(isoDateTimeProvider.currentDateTime());
+        assertEquals("2022-02-07T12:23:34", isoDateTimeProvider.currentDateTime());
+        assertEquals("7 Feb 2022 12:23:34", humanReadableDateTimeProvider.currentDateTime());
 
     }
 

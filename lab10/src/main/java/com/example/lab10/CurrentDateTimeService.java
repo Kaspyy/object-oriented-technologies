@@ -18,8 +18,7 @@ public class CurrentDateTimeService {
 
 
     public static void main(String[] args) {
-        CurrentDateTimeProvider provider = null;
-        CurrentDateTimeService currentDateTimeService = new CurrentDateTimeService(provider);
+        CurrentDateTimeService currentDateTimeService = new CurrentDateTimeService(null);
     }
 
 }
